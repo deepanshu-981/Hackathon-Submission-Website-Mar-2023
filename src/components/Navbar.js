@@ -4,7 +4,6 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles({
   bar: {
     backgroundColor:"white",
-    color:"blue",
     height :"100"
   },
   logo:

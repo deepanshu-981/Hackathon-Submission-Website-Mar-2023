@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from '@mui/material';
 import Bannerimage from './Bannerimage';
+import { useNavigate } from 'react-router-dom';
 const useStyles = makeStyles({
     banner: {
         display:"flex",
@@ -19,6 +20,7 @@ const useStyles = makeStyles({
 
 const Banner = () => {
     const classes=useStyles();
+    const navigate = useNavigate();
   return (
     <>
     
@@ -29,7 +31,8 @@ const Banner = () => {
          <Typography variant="h5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ut perspiciatis placeat quae ducimus eius possimus explicabo porro corporis deserunt ipsum, deleniti quasi iusto eaque cumque nulla fugit facilis optio</Typography>
         <br />
 
-         <Button variant="contained"  href="/upload">Upload Submission</Button>
+         <Button variant="contained"  onClick={()=>{ 
+      navigate(`/Upload`)}}>Upload Submission</Button>
          
         
 
